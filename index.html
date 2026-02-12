@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eneontodo — минималистичный сайт с конфигурациями для Hiddify, инструкцией по подключению и официальными Telegram-каналами.">
     <title>Eneontodo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,99 +14,92 @@
     <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
-    <!-- Animated background -->
     <div class="bg-gradient"></div>
     <div class="particles" id="particles"></div>
 
-    <!-- Header -->
     <header id="header">
         <div class="header-container">
-            <a href="#" class="logo gsap-reveal">
-                <div class="logo-icon">E</div>
+            <a href="#config-section" class="logo gsap-reveal" aria-label="Перейти к скачиванию конфигурации">
+                <span class="logo-icon" aria-hidden="true">E</span>
                 Eneontodo
             </a>
-            <div class="header-links">
-                <a href="https://t.me/+5eaq_-YSVTs1NGFi " target="_blank" class="tg-link tooltip gsap-reveal" data-tooltip="Telegram">
-                    <svg class="tg-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-                    </svg>
-                    <span>Telegram №2</span>
-                </a>
-                <a href="https://t.me/Where_Eneontodo" target="_blank" class="tg-link tooltip gsap-reveal" data-tooltip="Второй канал">
-                    <svg class="tg-icon" viewBox="0 0 24 24" fill="currentColor">
+            <nav class="header-links" aria-label="Основная навигация">
+                <a href="#about-section" class="nav-link gsap-reveal">О сервисе</a>
+                <a href="#faq-section" class="nav-link gsap-reveal">FAQ</a>
+                <a href="https://t.me/Where_Eneontodo" target="_blank" rel="noopener noreferrer" class="tg-link tg-link-primary tooltip gsap-reveal" data-tooltip="Основной канал">
+                    <svg class="tg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
                     </svg>
                     <span>Telegram</span>
                 </a>
-            </div>
+                <a href="https://t.me/+5eaq_-YSVTs1NGFi" target="_blank" rel="noopener noreferrer" class="tg-link tg-link-secondary tooltip gsap-reveal" data-tooltip="Резервный канал">
+                    <svg class="tg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                    </svg>
+                    <span>Telegram №2</span>
+                </a>
+            </nav>
         </div>
     </header>
 
-    <!-- Main content -->
     <main>
         <div class="container">
-            <!-- Config Download Section -->
             <section class="section" id="config-section">
                 <div class="section-card gsap-reveal">
-                    <h2 class="section-title">
-                        <div class="section-icon">⚡</div>
+                    <h1 class="section-title">
+                        <span class="section-icon" aria-hidden="true">⚡</span>
                         Обход белых списков
-                    </h2>
-                    
-                    <button class="download-btn" id="downloadBtn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    </h1>
+
+                    <button class="download-btn" id="downloadBtn" data-file="./config.txt" data-name="config.txt">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                             <polyline points="7 10 12 15 17 10"/>
                             <line x1="12" y1="15" x2="12" y2="3"/>
                         </svg>
                         Скачать конфигурацию
                     </button>
-                    <button class="download-btn" id="oldDownloadBtn" style="margin-top: 2%;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                <polyline points="7 10 12 15 17 10"/>
-                                <line x1="12" y1="15" x2="12" y2="3"/>
-                            </svg>
-                            Скачать всю конфигурацию(абсолютно все сервера, много мусора!)
+
+                    <button class="download-btn download-btn-secondary" id="oldDownloadBtn" data-file="./old_config.txt" data-name="old_config.txt">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Скачать всю конфигурацию (включая резервные серверы)
                     </button>
-                    <!-- Instructions -->
+
+                    <p id="downloadStatus" class="download-status" role="status" aria-live="polite"></p>
+
                     <div class="instructions">
-                        <h3 class="instructions-title">
+                        <h2 class="instructions-title">
                             <span>📱</span> Инструкция для Hiddify
-                        </h3>
-                        
+                        </h2>
+
                         <div class="instruction-step gsap-reveal">
                             <div class="step-number">1</div>
-                            <div class="step-content">
-                                <strong>Установите Hiddify</strong> — скачайте с 
-                                App Store/Google Play
-                            </div>
+                            <div class="step-content"><strong>Установите Hiddify</strong> из App Store или Google Play.</div>
                         </div>
-						    <div class="instruction-step gsap-reveal">
+
+                        <div class="instruction-step gsap-reveal">
                             <div class="step-number">2</div>
-                            <div class="step-content">
-                                <strong>вставте текст из файла</strong> — скопируйте текст из скачанного файла при нажатии на кнопку "Скачать конфигурацию"
-                            </div>
+                            <div class="step-content"><strong>Скачайте конфигурацию</strong> кнопкой выше и скопируйте содержимое файла.</div>
                         </div>
 
                         <div class="instruction-step gsap-reveal">
                             <div class="step-number">3</div>
-                            <div class="step-content">
-                                <strong>Добавьте подписку</strong> — нажмите <strong>+</strong> вверху → 
-                                <strong>Добавить из буфера обмена(Import from clipboard)</strong>
-                            </div>
+                            <div class="step-content"><strong>Добавьте подписку</strong>: нажмите <strong>+</strong> → <strong>Import from clipboard</strong>.</div>
                         </div>
 
                         <div class="instruction-step gsap-reveal">
                             <div class="step-number">4</div>
-                            <div class="step-content">
-                                <strong>Подключитесь</strong> — нажмите круглую кнопку питания для активации VPN
-                            </div>
+                            <div class="step-content"><strong>Подключитесь</strong> через круглую кнопку питания в Hiddify.</div>
                         </div>
                     </div>
+
                     <div class="store-buttons">
-                        <a href="https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532" target="_blank" class="store-btn gsap-reveal">
-                            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532" target="_blank" rel="noopener noreferrer" class="store-btn gsap-reveal">
+                            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.98 1.08-3.11-1.06.05-2.31.71-3.06 1.55-.67.75-1.26 1.95-1.1 3.1 1.19.09 2.37-.73 3.08-1.54z"/>
                             </svg>
                             <div class="store-text">
@@ -113,8 +107,8 @@
                                 <span class="store-name">App Store</span>
                             </div>
                         </a>
-                        <a href="https://play.google.com/store/apps/details?id=app.hiddify.com" target="_blank" class="store-btn gsap-reveal">
-                            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://play.google.com/store/apps/details?id=app.hiddify.com" target="_blank" rel="noopener noreferrer" class="store-btn gsap-reveal">
+                            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z"/>
                             </svg>
                             <div class="store-text">
@@ -126,16 +120,55 @@
                 </div>
             </section>
 
-            <!-- Games Section -->
+            <section class="section" id="about-section">
+                <div class="section-card gsap-reveal">
+                    <h2 class="section-title">
+                        <span class="section-icon section-icon-alt" aria-hidden="true">ℹ️</span>
+                        О сервисе Eneontodo
+                    </h2>
+                    <p class="about-text">Eneontodo — минималистичная площадка с быстрым доступом к конфигам для Hiddify и официальным каналам поддержки. Цель — дать понятный старт без лишних действий.</p>
+                    <div class="feature-grid">
+                        <article class="feature-card gsap-reveal">
+                            <h3>Прямой доступ</h3>
+                            <p>Скачивание конфигов и готовая пошаговая инструкция на одной странице.</p>
+                        </article>
+                        <article class="feature-card gsap-reveal">
+                            <h3>Поддержка в Telegram</h3>
+                            <p>Два официальных канала для анонсов, обновлений и резервного доступа.</p>
+                        </article>
+                        <article class="feature-card gsap-reveal">
+                            <h3>Совместимость</h3>
+                            <p>Файлы подготовлены для Hiddify на iOS и Android.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="faq-section">
+                <div class="section-card gsap-reveal">
+                    <h2 class="section-title">
+                        <span class="section-icon section-icon-alt" aria-hidden="true">❓</span>
+                        FAQ
+                    </h2>
+                    <details class="faq-item gsap-reveal">
+                        <summary>Что делать, если файл не скачивается?</summary>
+                        <p>Откройте сайт через HTTPS-хостинг и убедитесь, что в корне лежат <code>config.txt</code> и <code>old_config.txt</code>.</p>
+                    </details>
+                    <details class="faq-item gsap-reveal">
+                        <summary>Какая конфигурация лучше?</summary>
+                        <p>Начинайте с обычного конфига, а полную версию используйте как резерв при проблемах с доступностью узлов.</p>
+                    </details>
+                </div>
+            </section>
+
             <section class="section" id="games-section">
                 <div class="section-card gsap-reveal">
                     <h2 class="section-title">
-                        <div class="section-icon" style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));">🎮</div>
+                        <span class="section-icon section-icon-game" aria-hidden="true">🎮</span>
                         Игры
                     </h2>
-                    
                     <div class="games-grid">
-                        <a href="https://grindcraft.com/game.html" target="_blank" class="game-card gsap-reveal">
+                        <a href="https://grindcraft.com/game.html" target="_blank" rel="noopener noreferrer" class="game-card gsap-reveal">
                             <div class="game-title">GrindCraft</div>
                             <div class="game-desc">Симулятор</div>
                         </a>
@@ -145,184 +178,10 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="gsap-reveal">
-        <p class="footer-text">Самое дно сайта</p>
+        <p class="footer-text">Eneontodo — Simple. Direct. Accessible.</p>
     </footer>
 
-    <script>
-        // Register GSAP plugins
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Create floating particles
-        function createParticles() {
-            const container = document.getElementById('particles');
-            const particleCount = 20;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-                container.appendChild(particle);
-            }
-        }
-        createParticles();
-
-        // Header scroll effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        }, { passive: true });
-
-        // GSAP Animations - only enhance, don't hide
-        // Logo animation on load
-        gsap.from('.logo', {
-            opacity: 0.5,
-            x: -20,
-            duration: 0.6,
-            ease: 'power2.out'
-        });
-
-        // Header links animation
-        gsap.from('.tg-link', {
-            opacity: 0.5,
-            x: 20,
-            duration: 0.6,
-            stagger: 0.1,
-            ease: 'power2.out',
-            delay: 0.1
-        });
-
-        // Section cards animation
-        gsap.utils.toArray('.section-card').forEach((card, i) => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                },
-                y: 30,
-                opacity: 0.7,
-                duration: 0.6,
-                ease: 'power2.out',
-                delay: i * 0.1
-            });
-        });
-
-        // Instruction steps animation
-        gsap.utils.toArray('.instruction-step').forEach((step, i) => {
-            gsap.from(step, {
-                scrollTrigger: {
-                    trigger: step,
-                    start: 'top 90%'
-                },
-                x: -20,
-                opacity: 0.7,
-                duration: 0.4,
-                ease: 'power2.out',
-                delay: i * 0.08
-            });
-        });
-
-        // Game cards animation
-        gsap.utils.toArray('.game-card').forEach((card, i) => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 85%'
-                },
-                scale: 0.95,
-                opacity: 0.7,
-                duration: 0.5,
-                ease: 'back.out(1.4)',
-                delay: i * 0.08
-            });
-        });
-
-        // Store buttons animation
-        gsap.utils.toArray('.store-btn').forEach((btn, i) => {
-            gsap.from(btn, {
-                scrollTrigger: {
-                    trigger: btn,
-                    start: 'top 90%'
-                },
-                y: 15,
-                opacity: 0.7,
-                duration: 0.5,
-                ease: 'power2.out',
-                delay: i * 0.1
-            });
-        });
-
-        // Download button animation
-        gsap.from('.download-btn', {
-            scrollTrigger: {
-                trigger: '.download-btn',
-                start: 'top 80%'
-            },
-            y: 15,
-            opacity: 0.7,
-            duration: 0.6,
-            ease: 'power2.out'
-        });
-
-        // Footer animation
-        gsap.from('footer', {
-            scrollTrigger: {
-                trigger: 'footer',
-                start: 'top 95%'
-            },
-            y: 20,
-            opacity: 0.7,
-            duration: 0.5,
-            ease: 'power2.out'
-        });
-
-        // Download functionality
-		document.getElementById('downloadBtn').addEventListener('click', function () {
-		  const a = document.createElement('a');
-		  a.href = './config.txt';  
-		  a.download = 'config.txt';
-		  document.body.appendChild(a);
-		  a.click();
-		  a.remove();
-
-		  gsap.to(this, { scale: 0.98, duration: 0.1, yoyo: true, repeat: 1 });
-		});
-        document.getElementById('oldDownloadBtn').addEventListener('click', function () {
-		  const a = document.createElement('a');
-		  a.href = './old_config.txt';  
-		  a.download = 'old_config.txt';
-		  document.body.appendChild(a);
-		  a.click();
-		  a.remove();
-
-		  gsap.to(this, { scale: 0.98, duration: 0.1, yoyo: true, repeat: 1 });
-		});
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Parallax effect for background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.bg-gradient');
-            parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
-        }, { passive: true });
-    </script>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>

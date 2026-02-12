@@ -3,22 +3,19 @@
     .header-container {
         padding: 0.875rem 1rem;
     }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .section-card {
+        padding: 1.5rem;
+    }
 }
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-@keyframes float {
-    0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-    10% { opacity: 0.3; }
-    90% { opacity: 0.3; }
-    100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
-}
-@keyframes bgPulse {
-    0%, 100% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.1) rotate(5deg); }
-}
+
 @media (max-width: 480px) {
-    .games-grid {
+    .games-grid,
+    .feature-grid {
         grid-template-columns: 1fr;
     }
 }

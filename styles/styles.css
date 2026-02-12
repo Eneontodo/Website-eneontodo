@@ -630,3 +630,129 @@
         .gsap-reveal {
             opacity: 1;
         }
+/* --- 2026 optimization patch --- */
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.45rem 0.7rem;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.tg-link-primary {
+    color: white;
+    background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+    border: none;
+}
+
+.tg-link-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.tg-link-secondary {
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border-color);
+}
+
+.tg-link-secondary:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.download-btn-secondary {
+    margin-top: 2%;
+    background: linear-gradient(135deg, #2380f5, #4854ee);
+}
+
+.download-status {
+    min-height: 1.3rem;
+    margin-top: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+.download-status.is-error {
+    color: #ff8f8f;
+}
+
+.section-icon-alt {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+}
+
+.section-icon-game {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+}
+
+.about-text {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.feature-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+.faq-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.faq-item p {
+    margin-top: 0.6rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .header-links {
+        gap: 0.5rem;
+    }
+
+    .nav-link {
+        display: none;
+    }
+
+    .tg-link span {
+        display: none;
+    }
+
+    .tg-link {
+        padding: 0.55rem;
+    }
+}
