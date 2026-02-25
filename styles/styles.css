@@ -630,3 +630,252 @@
         .gsap-reveal {
             opacity: 1;
         }
+/* ===== Contrast redesign for Hiddify/Happ blocks ===== */
+:root {
+    --neo-bg-1: #060a1b;
+    --neo-bg-2: #0d1230;
+    --neo-panel: #0a1026;
+    --neo-panel-soft: #0f1734;
+    --neo-text-dim: #9aa6c9;
+    --neo-green: #19f5ba;
+    --neo-pink: #ff2ea1;
+}
+
+body {
+    background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(25, 245, 186, 0.09), transparent 60%),
+        radial-gradient(1100px 700px at 100% 10%, rgba(255, 46, 161, 0.08), transparent 62%),
+        linear-gradient(160deg, var(--neo-bg-1) 0%, var(--neo-bg-2) 100%);
+}
+
+.bg-gradient::before {
+    background:
+        radial-gradient(ellipse at 10% 10%, rgba(25, 245, 186, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 95% 35%, rgba(255, 46, 161, 0.08) 0%, transparent 48%),
+        radial-gradient(ellipse at 50% 100%, rgba(65, 108, 255, 0.08) 0%, transparent 55%);
+}
+
+.section-card {
+    background: linear-gradient(180deg, rgba(10, 16, 38, 0.92), rgba(8, 12, 30, 0.94));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ccffe6;
+    margin-bottom: 2rem;
+}
+
+.section-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 10px 24px rgba(25, 245, 186, 0.2);
+}
+
+.app-instructions {
+    margin-bottom: 1.8rem;
+    padding: 1.2rem;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(8, 13, 31, 0.95), rgba(10, 17, 40, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.app-instructions[data-app="hiddify"] {
+    border-left: 4px solid var(--neo-green);
+    box-shadow: 0 0 0 1px rgba(25, 245, 186, 0.16), 0 18px 36px rgba(25, 245, 186, 0.18);
+}
+
+.app-instructions[data-app="happ"] {
+    border-left: 4px solid var(--neo-pink);
+    box-shadow: 0 0 0 1px rgba(255, 46, 161, 0.16), 0 18px 36px rgba(255, 46, 161, 0.18);
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.app-icon {
+    font-size: 1.4rem;
+}
+
+.app-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.app-instructions[data-app="hiddify"] .app-title,
+.app-instructions[data-app="hiddify"] .app-icon {
+    color: var(--neo-green);
+}
+
+.app-instructions[data-app="happ"] .app-title,
+.app-instructions[data-app="happ"] .app-icon {
+    color: var(--neo-pink);
+}
+
+.steps {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.instruction-step {
+    margin-bottom: 0;
+    border-radius: 14px;
+    padding: 0.85rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: linear-gradient(180deg, rgba(13, 22, 51, 0.78), rgba(10, 17, 39, 0.82));
+}
+
+.app-instructions[data-app="hiddify"] .instruction-step {
+    border-left: 2px solid var(--neo-green);
+}
+
+.app-instructions[data-app="happ"] .instruction-step {
+    border-left: 2px solid var(--neo-pink);
+}
+
+.instruction-step:hover {
+    transform: translateX(3px);
+}
+
+.step-number {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.app-instructions[data-app="hiddify"] .step-number {
+    background: linear-gradient(135deg, #13ffbf, #09c28f);
+}
+
+.app-instructions[data-app="happ"] .step-number {
+    background: linear-gradient(135deg, #ff4fb8, #ff0f8b);
+}
+
+.step-content strong {
+    font-size: 1.1rem;
+}
+
+.store-mini {
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--neo-text-dim);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin: 0.7rem 0 0.4rem;
+}
+
+.action-btn {
+    border-radius: 999px;
+    padding: 0.62rem 1.15rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.02);
+    color: #f4f7ff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.action-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.app-instructions[data-app="hiddify"] .action-btn.primary {
+    background: linear-gradient(135deg, #1af7bd, #00c590);
+    border-color: rgba(25, 245, 186, 0.4);
+    color: #06231a;
+    box-shadow: 0 10px 24px rgba(25, 245, 186, 0.3);
+}
+
+.app-instructions[data-app="happ"] .action-btn.primary {
+    background: linear-gradient(135deg, #ff52ba, #ff168f);
+    border-color: rgba(255, 46, 161, 0.4);
+    color: #ffeaf6;
+    box-shadow: 0 10px 24px rgba(255, 46, 161, 0.3);
+}
+
+.action-btn.secondary {
+    background: rgba(6, 10, 29, 0.55);
+}
+
+.action-btn:hover {
+    transform: translateY(-1px);
+}
+
+.action-btn.secondary:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
+.step-note {
+    color: #8493bc;
+    font-size: 0.78rem;
+}
+
+.global-note {
+    margin-top: 1.4rem;
+    border-radius: 14px;
+    border: 1px dashed rgba(255, 255, 255, 0.16);
+    background: linear-gradient(180deg, rgba(10, 16, 37, 0.9), rgba(8, 12, 29, 0.94));
+    color: #9aa5c4;
+}
+
+.global-note code {
+    color: var(--neo-green);
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 999px;
+    border: 1px solid rgba(25, 245, 186, 0.3);
+}
+
+.footer-text {
+    color: #6f7898;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .app-title {
+        font-size: 1.55rem;
+    }
+
+    .action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.progress-container {
+    position: fixed;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 3px;
+    z-index: 2000;
+    background: transparent;
+    transition: opacity 0.3s ease;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #1af7bd, #8f5bff, #ff2ea1);
+    box-shadow: 0 0 18px rgba(25, 245, 186, 0.45);
+    transition: width 0.2s ease;
+}
