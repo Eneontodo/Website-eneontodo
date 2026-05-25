@@ -3,6 +3,10 @@
     .header-container {
         padding: 0.875rem 1rem;
     }
+
+    .feed-track {
+        grid-auto-columns: minmax(180px, 180px);
+    }
 }
 @keyframes spin {
     to { transform: rotate(360deg); }

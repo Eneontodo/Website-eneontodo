@@ -417,6 +417,107 @@
             font-weight: 600;
         }
 
+
+
+        .connect-note {
+            margin-top: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .feed-panels {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .feed-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1rem;
+        }
+
+        .feed-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feed-title {
+            color: var(--accent-blue);
+            font-size: 1rem;
+        }
+
+        .feed-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .feed-nav {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        .feed-track {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(220px, 220px);
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 0.25rem;
+        }
+
+        .feed-track::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .feed-track::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 999px;
+        }
+
+        .feed-card {
+            scroll-snap-align: start;
+            aspect-ratio: 1 / 1;
+            padding: 1rem;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .feed-card a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            line-height: 1.35;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .feed-card a:hover {
+            color: var(--accent-green);
+        }
+
+        .feed-card span {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
         /* Games section */
         .games-grid {
             display: grid;
