@@ -3,14 +3,28 @@
     .header-container {
         padding: 0.875rem 1rem;
     }
+
+    .feed-track {
+        grid-auto-columns: minmax(74vw, 74vw);
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        touch-action: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0 1rem 0.8rem;
+        scroll-padding-inline: 1rem;
+    }
+
+    .feed-controls {
+        display: none;
+    }
 }
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
 @keyframes float {
     0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-    10% { opacity: 0.3; }
-    90% { opacity: 0.3; }
+    10% { opacity: 0.22; }
+    90% { opacity: 0.22; }
     100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
 }
 @keyframes bgPulse {
